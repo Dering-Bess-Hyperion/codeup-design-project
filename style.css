@@ -1,0 +1,79 @@
+:root {
+    --cd-red: #E6563B;
+    --cd-orange: #EB9D3A;
+    --cd-green: #7CB06C;
+    --cd-blue: #00ABA9;
+    --cd-light: #F0F0F0;
+    --cd-dark: #E6E6E6;
+
+    --cd-anton: 'Anton', sans-serif;
+    --cd-abel: 'Abel', sans-serif;
+    /* var(--variabl) */
+}
+
+body {
+    font-family: var(--cd-abel);
+    background-color: var(--cd-dark);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--cd-anton);
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 28px;
+}
+
+.cd-logo {
+    width: 105px;
+    height: 105px;
+    color: var(--cd-light);
+}
+
+.cd-logo-small {
+    width: 18px;
+    height: 18px;
+    color: black;
+}
+
+.cd-border, .cd-border-small {
+    border-radius: 50%;
+}
+
+.cd-border {
+    border: .5em solid var(--cd-light);
+}
+
+.cd-red {
+    background-color: var(--cd-red);
+}
+
+.cd-orange {
+    background-color: var(--cd-orange);
+}
+
+.cd-green {
+    background-color: var(--cd-green);
+}
+
+.cd-blue {
+    background-color: var(--cd-blue);
+}
+
+.cd-card-btns
