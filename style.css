@@ -16,7 +16,7 @@ body {
     background-color: var(--cd-dark);
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--cd-anton);
 }
 
@@ -76,4 +76,13 @@ h5 {
     background-color: var(--cd-blue);
 }
 
-.cd-card-btns
+.cd-image-background {
+    background-color: #e6e6e6;
+    width: 100%;
+    height: auto;
+}
+
+.cd-image {
+    width: inherit;
+    height: inherit;
+}
