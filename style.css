@@ -67,7 +67,7 @@ header {
 /*I put the title 20% from the top of the screen*/
 .cd-nav-title {
     position: absolute;
-    top: 20%;
+    top: 15%;
     font-family: var(--cd-abel);
 }
 
@@ -76,7 +76,7 @@ header {
     list-style: none;
     padding: 0;
     position: absolute;
-    top: 25%;
+    top: 20%;
     margin-top: 1rem;
     display: flex;
 }
