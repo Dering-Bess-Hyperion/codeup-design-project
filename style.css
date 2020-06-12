@@ -1,3 +1,4 @@
+/*These are the variables I used*/
 :root {
     --cd-red: #E6563B;
     --cd-orange: #EB9D3A;
@@ -10,17 +11,19 @@
     --cd-abel: 'Abel', sans-serif;
     /* var(--variabl) */
 }
-
+/* Aligned text to the center and changed the overall font-family for all elements*/
 body {
     text-align: center;
     font-family: var(--cd-abel);
     background-color: var(--cd-dark);
 }
 
+/*I then changed the font-family for all the headings*/
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--cd-anton);
 }
 
+/*The font-size was a little big for the smaller screens so I changed it to be a little smaller and gradually get bigger*/
 h1 {
     font-size: 42px;
 }
@@ -41,20 +44,13 @@ h5 {
     font-size: 9px;
 }
 
+/*Header background-color is applied and a margin is used to push the rest of the content down*/
 header {
     margin-bottom: 10rem;
     background-color: var(--cd-light);
 }
 
-/*.header-stripe {*/
-/*    background-color: var(--cd-light);*/
-/*    height: 3em;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-
+/*I created this a flex element to get things lined up to the center for when its needed*/
 .cd-nav {
     height: 3em;
     display: flex;
@@ -63,22 +59,19 @@ header {
     align-items: center;
 }
 
+/*This is how I positioned the logo*/
 .cd-nav-logo {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
 }
 
+/*I put the title 20% from the top of the screen*/
 .cd-nav-title {
     position: absolute;
     top: 20%;
     font-family: var(--cd-abel);
 }
 
-.cd-nav-title h4 {
-    font-family: inherit;
-}
-
+/*I positioned this below the above title*/
 .cd-nav-list {
     list-style: none;
     padding: 0;
@@ -88,11 +81,13 @@ header {
     display: flex;
 }
 
+/*Gave the li some margin so they would be farther apart*/
 .cd-nav-list li {
     margin-left: 0.6em;
     display: inline-block;
 }
 
+/*Removed the margin-left on the first element so it would line up*/
 .cd-nav-list li:nth-child(1) {
     margin-left: 0;
 }
@@ -101,10 +96,12 @@ li a {
     color: black;
 }
 
+/*The default styling had some margin which I found unnecessary*/
 .cd-circle-heading {
     margin: 0;
 }
 
+/*Set up classes to use each of the colors*/
 .cd-red {
     background-color: var(--cd-red);
 }
@@ -121,12 +118,15 @@ li a {
     background-color: var(--cd-blue);
 }
 
+/*The logo and the circles shared some styling so I grouped them together*/
 .cd-logo, .cd-circle-big {
     width: 105px;
     height: 105px;
     color: var(--cd-light);
 }
 
+/*Both the big circles and the small circles shared styling so I applied it here*/
+/*This was to center the text inside the circles*/
 .cd-circle-big, .cd-circle-small {
     display: flex;
     justify-content: center;
@@ -139,69 +139,85 @@ li a {
     margin-left: .5em;
 }
 
+/*Gave the circles a border radius to make them rounded*/
 .cd-border, .cd-border-small {
     border-radius: 50%;
 }
 
+/*This styling was only applied to the big circles because they had a noticeable border*/
 .cd-border {
     border: .5em solid var(--cd-light);
 }
 
+/*This was some trial and error for image sizing*/
 .cd-image-background {
     background-color: #e6e6e6;
     width: 100%;
     height: auto;
 }
 
+/*This made sure that it was 100% of its parent's width and height*/
 .cd-image {
     width: 100%;
     height: 100%;
 }
 
+/*The article images on the right hand side are set here*/
 .cd-article .cd-image-background img, .cd-article .cd-image-background {
     width: 70px;
     height: 70px;
-    /*85.8333×70    */
 }
 
+/*This is the first media query for the small size.*/
 @media screen and (min-width: 576px) {
+    /*I change the h1 back to its full size because it looked good given the current screen size*/
     h1 {
         font-size: 64px;
     }
 
+    /*I also changed the h2 back to its full size*/
     h2 {
         font-size: 48px;
     }
 
+    /*I change the nav list so that it lines back up with the white background of the header and center the content*/
     .cd-nav-list {
         position: static;
         justify-content: center;
     }
 
+    /*I change the margin of the li to give it more spacing*/
     .cd-nav-list li {
         margin-left: 2em;
     }
 
+    /*This was my solution to having the elements split around the logo that is in the center of the bar*/
     #push-left {
         margin-left: 10em;
     }
 
+    /*Change the image sizes for certain screen sizes so they still look good and remain lined up*/
     .cd-image-background {
         height: 159px;
     }
 }
 
+/*Media Query for the Medium screen size*/
 @media screen and (min-width: 768px) {
+    /*Aligned the text to the left. This is for the elements below the horizontal rule*/
     body {
         text-align: left;
     }
 
+    /*Changed the navigation to be a row and re arranged content with the justify-content property*/
     .cd-nav {
         flex-direction: row;
         justify-content: space-evenly;
         width: 100%;
     }
 
+    /*I positioned the logo on the left side but moved it forward a little bit with the transform property*/
+    /*I also gave it a margin right to move the title which sits next to it*/
     .cd-nav-logo {
         position: static;
         left: 0;
@@ -209,41 +225,42 @@ li a {
         margin-right: 4rem;
     }
 
+    /*I changed the position to static so that it would go to where it normally would be which is right infront of that white background*/
     .cd-nav-title {
         position: static;
         flex-grow: 1;
     }
 
+    /*I changed the margin-left to auto to push itself to the right as far as possible*/
+    /*I then made a margin-right to position it a little better so it would'nt be flush against the ride side*/
     .cd-nav-list {
         margin-left: auto;
         margin-right: 1em;
     }
 
+    /*I changed the spacing of the li again*/
     #push-left {
         margin-left: 2em;
     }
 
+    /*Changed the images once again to look good and keep them aligned*/
     .cd-image-background {
         height: 139px;
     }
 }
 
 @media screen and (min-width: 992px) {
+    /*Changed the images once again to look good and keep them aligned*/
     .cd-image-background {
         height: 192px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    h1 {
-        font-size: 64px;
-    }
-
-    h2 {
-        font-size: 48px;
-    }
-
+    /*Changed the images once again to look good and keep them aligned*/
     .cd-image-background {
         height: 232px;
     }
 }
+
+/*I got all image values from having their height be auto and took the values as a baseline*/

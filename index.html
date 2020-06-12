@@ -11,6 +11,7 @@
     <title>Codeup-Design-Project</title>
 </head>
 <body>
+    <!-- Header which will contain the nav bar -->
     <header>
         <div class="container">
             <nav class="cd-nav mt-5">
@@ -26,12 +27,16 @@
         </div>
     </header>
 
+    <!-- A container within a container because I noticed the inside wasn't exactly lined up with the text "Selected Work" -->
     <div class="container mt-5">
         <div class="container text-center">
             <h1 class="mt-5 pt-5">VISUAL DESIGN & WEB DEVELOPMENT</h1>
             <h2 class="mt-5">FROM PARK CITY, UTAH</h2>
+            <!-- This row will have the two columns that will contain each of the circles -->
             <div class="row p-5">
                 <div class="col-md-6 p-2">
+                    <!-- I put a row in here so that when the screen would change these two would be on top -->
+                    <!-- Keeping with the scheme of Design Develop - Support Host -->
                     <div class="row d-flex justify-content-around">
                         <div class="cd-circle-big cd-red cd-border">
                             <h3 class="cd-circle-heading">DESIGN</h3>
@@ -53,8 +58,10 @@
                 </div>
             </div>
         </div>
+        <!-- The horizontal rule that will disappear below the medium screen size-->
         <hr class="d-none d-md-block">
         <div class="row">
+            <!-- This is the column that holds all of the selected work -->
             <div class="col-md-8">
                 <p>SELECTED WORK</p>
                 <div class="row">
@@ -156,6 +163,7 @@
                     </div>
                 </div>
             </div>
+            <!-- This is the column that takes up the rest of the width the above didn't use -->
             <div class="col-md-4 d-none d-md-block">
                 <p>THE LAST</p>
                 <aside style="display: flex; flex-direction: column">
